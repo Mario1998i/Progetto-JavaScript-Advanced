@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Book Explorer</h1>
+        <p>Incentiva la lettura dei libri con l'aiuto di Open Library!</p>
+    </header>
+    <main class="container">
+        <div class="search-bar">
+            <input type="text" id="category" placeholder="Inserisci una categoria...">
+            <button id="search-btn">Cerca</button>
+        </div>
+        <div class="content">
+            <div id="results" class="results">
+                <!-- Qui verranno mostrati i risultati -->
+            </div>
+            <div id="book-description" class="description">
+                <h2>Descrizione</h2>
+                <p>Seleziona un libro per visualizzare la descrizione qui.</p>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

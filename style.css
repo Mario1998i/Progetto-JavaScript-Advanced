@@ -1,0 +1,171 @@
+/* Stile generale */
+body {
+    font-family: 'Poppins', sans-serif; /* Font più moderno e stiloso */
+    margin: 0;
+    padding: 0;
+    background: url("img/img.jpg") no-repeat center center fixed; /* Immagine di sfondo */
+    background-size: cover; /* Adatta l'immagine allo schermo */
+    color: #333;
+}
+
+header {
+    background: rgba(195, 139, 65, 0.9); /* Trasparenza sull'header per evidenziare il testo */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+/* Struttura */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9); /* Sfondo bianco traslucido */
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Barra di ricerca */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 15px;
+    font-size: 1.2rem;
+    width: 60%;
+    border: 2px solid rgba(195, 139, 65, 0.9);
+    border-radius: 50px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    background: #fdfdfd;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px rgba(195, 139, 65, 0.9);
+    transform: scale(1.03);
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, rgba(195, 139, 65, 0.9), rgba(195, 139, 65, 0.7));
+    color: white;
+    border: none; 
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+    background: linear-gradient(90deg, rgba(195, 139, 65, 0.7), rgba(195, 139, 65, 0.9));
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(195, 139, 65, 0.9);
+}
+
+/* Layout dei risultati e descrizione */
+.content {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.results {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.results .book {
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(120deg, #fdfdfd, #f5f5f5);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.results .book:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.results .book h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.results .book p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Descrizione del libro */
+.description {
+    flex: 2;
+    padding: 20px;
+    background: linear-gradient(120deg, #f9f9f9, #ffffff);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    animation: slideIn 0.4s ease-out;
+}
+
+.description h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.description p {
+    margin: 20px 0 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Animazioni */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
